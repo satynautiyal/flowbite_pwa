@@ -1,0 +1,27 @@
+
+<div class="block max-w-full p-6 bg-white border border-gray-200 shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 mb-8">
+
+    <div class="mb-2 text-sm tracking-tight text-black dark:text-white mb-4"><%= sale_data[:heading] %></div>
+    <div class="">
+        <div class="flex justify-between mb-4">
+            <div class="flex justify-start gap-2 items-center">
+                <% if sale_data[:percent] > 0 %>
+                    <svg class="w-8 h-8 text-[#1de9b6] dark:text-white text-lg" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v13m0-13 4 4m-4-4-4 4"/>
+                    </svg>
+                <% else %>
+                    <svg class="w-8 h-8 text-[#f44236] dark:text-white text-lg" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19V5m0 14-4-4m4 4 4-4"/>
+                    </svg>
+
+                <% end %>
+                <div class="text-xl">$<%= sale_data[:revenue] %></div>
+
+            </div>
+            <div class="text-sm"><%= sale_data[:percent] %>%</div>
+        </div>
+        <div class="w-full bg-gray-200 h-2 dark:bg-gray-700 shadow-lg shadow-gray-800/50 flex items-center">
+            <div class="h-2.5 bg-gradient-to-r <%= sale_data[:percent] > 0 ? "from-sky-500 to-green-300" : "from-[#899fd4] to-[#a389d4]" %>" style="width: 45%"></div>
+        </div>
+    </div>
+</div>

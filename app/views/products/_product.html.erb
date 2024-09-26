@@ -1,0 +1,16 @@
+<div id="<%= dom_id product %>">
+  <tr class="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700">
+    <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+        <%= product.name %>
+    </th>
+    <td class="px-6 py-4"><%= product.color %></td>
+    <td class="px-6 py-4"><%= product.category %></td>
+    <td class="px-6 py-4"><%= product.price %></td>
+    <td class="px-6 py-4 text-right flex gap-2 justify-end">
+        <button data-modal-target="popup-modal<%= product.id %>" data-modal-toggle="popup-modal<%= product.id %>" type="button" class="text-white bg-gradient-to-r from-[#899fd4] to-[#a389d4] text-xs px-[10px] py-[5px] rounded-full pointer">Reject</button>
+        <button type="button" class="text-white bg-gradient-to-r from-[#1de9b6] to-[#1dc4e9] text-xs px-[10px] py-[5px] rounded-full pointer">Approve</button>
+    </td>
+  </tr>      
+</div>
+<%= render "components/delete_confirmation", id: product.id, ping_path: "/products/#{product.id}" %>
+

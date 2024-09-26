@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "flowbite": "^2.5.1",
+    "webpacker-pwa": "^0.1.2"
+  }
+}
