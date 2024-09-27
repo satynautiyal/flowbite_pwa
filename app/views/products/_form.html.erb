@@ -11,27 +11,27 @@
   <% end %>
   <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-4 mb-8">
     <div class="">
-      <%= form.label :name %>
-      <%= form.text_field :name, class: "block shadow rounded-md border border-[#ddd] outline-none px-3 py-2 mt-2 w-full text-sm" %>
+      <%= form.label :name, class: "text-[13px]" %>
+      <%= form.text_field :name, class: "block shadow rounded-md border border-[#ddd] outline-none px-3 py-2 mt-2 w-full text-[14px]" %>
     </div>
 
     <div class="">
-      <%= form.label :color %>
-      <%= form.text_field :color, class: "block shadow rounded-md border border-[#ddd] outline-none px-3 py-2 mt-2 w-full text-sm" %>
+      <%= form.label :color, class: "text-[13px]" %>
+      <%= form.text_field :color, class: "block shadow rounded-md border border-[#ddd] outline-none px-3 py-2 mt-2 w-full text-[14px]" %>
     </div>
 
     <div class="">
-      <%= form.label :category %>
-      <%= form.select :category, options_for_select([["Mobile", "mobile"], ["Laptop", "laptop"], ["Clothing", "clothing"], ["Other", "other"]]), { include_blank: false }, { class: "block shadow rounded-md border border-[#ddd] outline-none px-3 py-2 mt-2 w-full text-sm" } %>
+      <%= form.label :category, class: "text-[13px]" %>
+      <%= form.select :category, options_for_select([["Mobile", "mobile"], ["Laptop", "laptop"], ["Clothing", "clothing"], ["Other", "other"]]), { include_blank: false }, { class: "block shadow rounded-md border border-[#ddd] outline-none px-3 py-2 mt-2 w-full text-[14px]" } %>
     </div>
 
-    <div class="">
-      <%= form.label :price %>
-      <%= form.text_field :price, class: "block shadow rounded-md border border-[#ddd] outline-none px-3 py-2 mt-2 w-full text-sm" %>
+    <div class="mb-2">
+      <%= form.label :price, class: "text-[13px]" %>
+      <%= form.text_field :price, class: "block shadow rounded-md border border-[#ddd] outline-none px-3 py-2 mt-2 w-full text-[14px]" %>
     </div>
   </div>
 
   <div class="inline">
-    <%= form.submit class: "text-white bg-gradient-to-r from-[#1de9b6] to-[#1dc4e9] text-sm text-bold px-4 py-3 rounded-full pointer"  %>
+    <%= form.submit class: "text-white bg-gradient-to-r from-[#1de9b6] to-[#1dc4e9] text-sm sm:text-sm text-bold px-4 sm:px-4 py-[6px] sm:py-3 rounded-full pointer"  %>
   </div>
 <% end %>

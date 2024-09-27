@@ -37,9 +37,25 @@
     }
 
     .slick-slide {
-        margin: 0 10px; /* Adjust the value for desired spacing */
+        margin: 0 10px 0 0; /* Adjust the value for desired spacing */
     }
 
     .slick-list {
         margin: 0 -10px; /* Negative margin to counteract the slide margins */
+    }
+
+    .slick-track
+    {
+        display: flex !important;
+    }
+
+    .slick-slide
+    {
+        height: inherit !important;
+    }
+    .slick-arrow-right{
+        left: -31px !important;
+    }
+    .slick-arrow-left{
+        right: -29px !important;
     }

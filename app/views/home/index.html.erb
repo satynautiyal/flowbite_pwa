@@ -1,23 +1,25 @@
 
 <div class="">
-    <h5 class="text-2xl text-bold mb-8">Sales Analysis</h5>
-    <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
-        <% @salesData.each do |sale| %>
-            <%= render "components/sales_card", sale_data: sale %>
-        <% end %>
+    <div class="w-full sm:mt-2 mt-6">
+        <h5 class="text-xl sm:text-2xl text-bold mb-4">Sales Analysis</h5>
+        <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
+            <% @salesData.each do |sale| %>
+                <%= render "components/sales_card", sale_data: sale %>
+            <% end %>
+        </div>
     </div>
-    <div class="w-full mt-8">
-        <h5 class="text-2xl text-bold mb-8">Shipped products</h5>
+    <div class="w-full sm:mt-4 mt-8">
+        <h5 class="text-xl sm:text-2xl text-bold mb-4">Shipped products</h5>
         <div id="products" class="min-w-full">
-            <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-8">
+            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
-                    <th scope="col" class="px-6 py-3">Product name</th>
-                    <th scope="col" class="px-6 py-3">Color</th>
-                    <th scope="col" class="px-6 py-3">Category</th>
-                    <th scope="col" class="px-6 py-3">Price</th>
-                    <th scope="col" class="px-6 py-3">
+                    <th scope="col" class="px-2 sm:px-6 py-3 whitespace-nowrap">Product name</th>
+                    <th scope="col" class="px-2 sm:px-6 py-3 whitespace-nowrap">Color</th>
+                    <th scope="col" class="px-2 sm:px-6 py-3 whitespace-nowrap">Category</th>
+                    <th scope="col" class="px-2 sm:px-6 py-3 whitespace-nowrap">Price</th>
+                    <th scope="col" class="px-2 sm:px-6 py-3 whitespace-nowrap">
                         <span class="sr-only">Edit</span>
                     </th>
                 </tr>
@@ -31,8 +33,8 @@
             </div>
         </div>
     </div>
-    <div class="w-full mt-8">
-        <h5 class="text-2xl text-bold mb-8">Our Shipping partners</h5>
+    <div class="w-full sm:mt-4 mt-8">
+        <h5 class="text-xl sm:text-2xl text-bold mb-4">Our Shipping partners</h5>
         <div class="slick_slider">
             <% shipping_partners.each do |partner| %>
                 <%= render "components/shipping_partner_card", partner: partner %>

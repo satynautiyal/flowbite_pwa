@@ -1,7 +1,9 @@
-<h1 class="text-4xl">New product</h1>
-<div class="w-full bg-white shadow-lg px-[22px] py-[22px] rounded mt-[24px]">
+<div class="w-full sm:mt-2 mt-6">
+  <h5 class="text-xl sm:text-2xl text-bold mb-4">New product</h5>
+  <div class="w-full bg-white shadow-lg px-[14px] sm:px-[22px] py-[22px] rounded">
 
-  <%= render "form", product: @product %>
+    <%= render "form", product: @product %>
 
-  <%= link_to "Back to products", products_path, class: "text-white bg-gradient-to-r from-[#899fd4] to-[#a389d4] text-sm text-bold px-4 py-3 rounded-full pointer"  %>
+    <%= link_to "Back to products", products_path, class: "text-white bg-gradient-to-r from-[#899fd4] to-[#a389d4] text-sm sm:text-sm text-bold px-4 sm:px-4 py-[6px] sm:py-3 rounded-full pointer"  %>
+  </div>
 </div>

@@ -5,9 +5,9 @@
 
   <% content_for :title, "Products" %>
 
-  <div class="flex justify-between items-center">
-    <h1 class="text-4xl">Products</h1>
-    <%= link_to "New product", new_product_path, class: "text-white bg-gradient-to-r from-[#1de9b6] to-[#1dc4e9] text-sm text-bold px-4 py-3 rounded-full pointer" %>
+  <div class="flex justify-between items-center w-full sm:mt-2 mt-6">
+    <h5 class="text-xl sm:text-2xl text-bold m-0">Products</h5>
+    <%= link_to "New product", new_product_path, class: "text-white bg-gradient-to-r from-[#1de9b6] to-[#1dc4e9] text-sm sm:text-sm text-bold px-4 sm:px-4 py-[6px] sm:py-3 rounded-full pointer" %>
   </div>
 
   <div id="products" class="min-w-full">
@@ -15,11 +15,11 @@
       <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
           <tr>
-            <th scope="col" class="px-6 py-3">Product name</th>
-            <th scope="col" class="px-6 py-3">Color</th>
-            <th scope="col" class="px-6 py-3">Category</th>
-            <th scope="col" class="px-6 py-3">Price</th>
-            <th scope="col" class="px-6 py-3">
+              <th scope="col" class="px-2 sm:px-6 py-3 whitespace-nowrap">Product name</th>
+              <th scope="col" class="px-2 sm:px-6 py-3 whitespace-nowrap">Color</th>
+              <th scope="col" class="px-2 sm:px-6 py-3 whitespace-nowrap">Category</th>
+              <th scope="col" class="px-2 sm:px-6 py-3 whitespace-nowrap">Price</th>
+              <th scope="col" class="px-2 sm:px-6 py-3 whitespace-nowrap">
                 <span class="sr-only">Edit</span>
             </th>
           </tr>
